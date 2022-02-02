@@ -1,4 +1,4 @@
-# hitungzakatprofesi
+# Hitung Zakat Penghasilan / Profesi
 Aplikasi Berapa Zakat yang dibayarkan menurut Penghasilan Kotor (Python)
 <br />
 ## Menggunakan cmd sebagai user interface
