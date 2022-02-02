@@ -1,0 +1,65 @@
+# variable berbentuk array
+nama=[]
+gaji=[]
+emas=[]
+zakat=[]
+pertahun=[]
+perbulan=[]
+nisab=[]
+data=1
+
+def main():
+	global data
+	print ('+-----------------------------------------------+')
+	print ('|         Menghitung Zakat Penghasilan          |')
+	print ('|      menurut pendapatan kasar (brutto)        |')
+	print ('|                                               |')
+	print ('+-----------------------------------------------+')
+	data=int(input('Masukan banyak data yang ingin diinputkan : '))
+	print('==========================================')
+	return data
+
+main()
+
+# looping untuk hitung jumlah data yg ingin input. misal:1
+def nama_fungsi(data):
+	for i in range(data):
+	    a = input('Masukan nama : ')
+	    nama.append(a)
+	    b = int(input('Masukan harga emas : '))
+	    emas.append(b)
+	    c = int(input('Berapa penghasilan/bulan : '))
+	    gaji.append(c)
+	    print('')
+ 
+	# formula penghitungan zakat dengan acuan 2.5% nisab emas
+	for i in range(data):
+	    d = 12 * gaji[i]
+	    pertahun.append(d)
+	    e = 0.025 * pertahun[i]
+	    zakat.append(e)
+	    f = 85 * emas[i]
+	    nisab.append(f)
+	    g = zakat[i] / 12
+	    perbulan.append(g)
+
+	# output print (user interface)
+	for i in range(data):
+	    print ('')
+	    print('----------------------------------------')
+	    print('      Zakat Penghasilan (Brutto)', nama[i])
+	    print('----------------------------------------')
+	    print('Nama                         :',nama[i])
+	    print('Harga 1 gram emas            :','Rp.',emas[i])
+	    print('Penghasilan per bulan        :','Rp.',gaji[i])
+	    print('Penghasilan per tahun        :','Rp.',pertahun[i])
+	    print('Harga nishab (85 gram emas)  :','Rp.',nisab[i])
+	    print('Zakat penghasilan            :','2.5% x',pertahun[i],'=','Rp.',zakat[i])
+	    if pertahun[i] >= nisab[i]: #decision ya atau tidak
+	        print('Keterangan                   : WAJIB Zakat Rp.',zakat[i],'/tahun')
+	        print('                               atau Rp. ',perbulan[i],'/bulan')
+	        print('')
+	    if pertahun[i] <= nisab[i]:
+	        print('Keterangan                   : kamu BELUM WAJIB Zakat')
+
+nama_fungsi(data) #proses pemanggilan fungsi
