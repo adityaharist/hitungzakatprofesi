@@ -8,7 +8,8 @@ Aplikasi Berapa Zakat yang dibayarkan menurut Penghasilan Kotor (Python)
 <li>3. Download file index.py ke komputermu C:/Users/(yourcomputer)</li>
 <li>4. Buka cmd ketikkan python index.py (jika telah terinstal python di komputermu) </li>
 </ul>
-<br>
+<br />
+
 ## Cara penggunaan
 <ul>
   <li>1. Masukan banyak data yang ingin diinputkan : 1. Tergantung dari data nama pegawai yang ingin diproses bisa 2,3,4 dst. Harus berupa angka karena integer type datanya</li>
